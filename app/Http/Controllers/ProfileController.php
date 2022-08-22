@@ -17,6 +17,8 @@ class ProfileController extends Controller
 
     public function getUser()
     {
-        return 'Hello User';
+        $name = 'Welcome ' . request('name');
+
+        return view('index', ['name' => $name]);
     }
 }

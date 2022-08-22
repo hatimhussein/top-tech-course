@@ -18,11 +18,12 @@ use App\Http\Controllers\ProfileController;
 
 Route::prefix('profile')
         ->controller(ProfileController::class)
-        ->name('profile.')->group(function(){
+        ->name('profile.')
+        ->group(function(){
 
     Route::get('/', 'getInfo')->name('info');
 
-    Route::get('user', 'getUser')->name('user');
+    Route::get('user/{name?}', 'getUser')->name('user');
 
     Route::get('subjects', 'getUserSubjects')->name('user.subjects');
 
