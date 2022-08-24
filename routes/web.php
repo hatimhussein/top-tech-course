@@ -21,9 +21,8 @@ Route::prefix('profile')
         ->name('profile.')
         ->group(function(){
 
-    Route::get('/', 'getInfo')->name('info');
-
-    Route::get('user/{name?}', 'getUser')->name('user');
+    Route::get('/', 'getUser')->name('user');
+    Route::get('/contact', 'contact')->name('contact');
 
     Route::get('subjects', 'getUserSubjects')->name('user.subjects');
 
