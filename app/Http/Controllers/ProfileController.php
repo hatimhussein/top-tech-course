@@ -29,4 +29,9 @@ class ProfileController extends Controller
 
         return view('contact');
     }
+
+    public function contactStore(Request $request)
+    {
+        dd($request->all());
+    }
 }

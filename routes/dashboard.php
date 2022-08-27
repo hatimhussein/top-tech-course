@@ -1,7 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Dashboard\AdminController;
 
 
-Route::get('test', [ProfileController::class, 'getInfo']);
+
+Route::prefix('dashboard-admin')->group(function(){
+    Route::get('/', [AdminController::class, 'index']);
+
+});

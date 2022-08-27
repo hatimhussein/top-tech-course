@@ -23,6 +23,7 @@ Route::prefix('profile')
 
     Route::get('/', 'getUser')->name('user');
     Route::get('/contact', 'contact')->name('contact');
+    Route::post('/contact', 'contactStore')->name('contact.store');
 
     Route::get('subjects', 'getUserSubjects')->name('user.subjects');
 
